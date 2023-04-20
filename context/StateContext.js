@@ -9,7 +9,7 @@ export const StateContext = ({children}) => {
     const [detailsExpandedEmployer, setDetailsExpandedEmployer] = useState(false)
     const [applicationExpanded, setApplicationExpanded] = useState(false)
     const [windowSize, setWindowSize] = useState(0)
-    const [activeLink, setActiveLink] = useState('/applicant/profile')
+    const [activeLink, setActiveLink] = useState('/applicant/profile') 
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
