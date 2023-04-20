@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const ApplicantSignUp = () => {
+const EmployerSignUp = () => {
   return (
     <div className=' bg-slate-50 w-full md:w-3/4 md:flex rounded-md shadow-md'>
         <div className='flex my-12 flex-col flex-1 gap-12 items-center'>
@@ -10,7 +10,7 @@ const ApplicantSignUp = () => {
         </div>
         <div className='flex py-12 flex-col flex-1 rounded-md shadow-md bg-gradient-to-tl from-sky-950 to-sky-800'>
             <div className=''>
-                <h1 className=' text-center  text-slate-200 font-semibold text-2xl'>{"Let's Get Stated!"}</h1>
+                <h1 className=' text-center  text-slate-200 font-semibold text-2xl'>Employer Sign Up!</h1>
                 <p className=' text-center text-slate-300 text-base'>Sign up and get access to all the features.</p>
             </div>
 
@@ -44,4 +44,4 @@ const ApplicantSignUp = () => {
   )
 }
 
-export default ApplicantSignUp
+export default EmployerSignUp
