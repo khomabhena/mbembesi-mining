@@ -3,6 +3,9 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 const Context = createContext()
 
 export const StateContext = ({children}) => {
+    const [jobDetails, setJobDetails] = useState(null)
+    const [applicantDetails, setApplicantDetails] = useState(null)
+
     const [expanded, setExpanded] = useState(false)
     const [detailsExpanded, setDetailsExpanded] = useState(false)
     const [applicantDetailsExpanded, setApplicantDetailsExpanded] = useState(false)
@@ -19,7 +22,9 @@ export const StateContext = ({children}) => {
 
   return (
     <Context.Provider
-        value={{expanded, setExpanded, applicantDetailsExpanded, setApplicantDetailsExpanded, 
+        value={{
+          jobDetails, setJobDetails, applicantDetails, setApplicantDetails,
+          expanded, setExpanded, applicantDetailsExpanded, setApplicantDetailsExpanded, 
           applicationExpanded, setApplicationExpanded,
           detailsExpandedEmployer, setDetailsExpandedEmployer,
            detailsExpanded, setDetailsExpanded, activeLink, setActiveLink, windowSize}}

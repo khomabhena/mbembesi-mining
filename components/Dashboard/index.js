@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Sidebar from './Sidebar'
 import Container from './Container'
 import { useStateContext } from '@/context/StateContext'
@@ -7,9 +7,21 @@ import JobDetails from '../Applicant/job-details'
 import ApplicationDetails from '../Applicant/application-details'
 import JobDetailsEmployer from '../Employer/job-details'
 import ApplicantDetails from '../Employer/applicant-details'
+import { useAuthContext } from '@/context/AuthContext'
+import { useRouter } from 'next/router'
+import firebase_app from '@/firebase/config'
+import { getAuth } from 'firebase/auth'
 
 const DashboardLayout = ({children, menu, title}) => {
   const { detailsExpanded, applicationExpanded, detailsExpandedEmployer, applicantDetailsExpanded } = useStateContext()
+  const { user, setUser } = useAuthContext()
+  const router = useRouter()
+  const auth = getAuth(firebase_app)
+
+  useEffect(() => {
+    if (user === null) return () => router.push("/applicant/signin")
+    // auth.signOut()
+  }, [router, user])
 
   return (
     <div>
@@ -25,7 +37,7 @@ const DashboardLayout = ({children, menu, title}) => {
             {children}
         </Container>
         <div className={`${detailsExpanded || applicantDetailsExpanded || detailsExpandedEmployer || applicationExpanded ? 'block' : 'hidden'} w-full bg-slate-900 opacity-70 fixed top-0 h-full`}>
-          Cover
+          
         </div>
         <div className={`${detailsExpanded ? 'block' : 'hidden'} overscroll-contain fixed top-0 right-0 bg-slate-100 overflow-auto 
           px-4 md:px-12 pt-12 pb-8 h-full w-full md:w-3/4`}>

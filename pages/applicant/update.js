@@ -12,7 +12,7 @@ const Update = () => {
 }
 
 Update.getLayout = (page) => (
-  <ApplicantDashboard>
+    <ApplicantDashboard>
       {page}
     </ApplicantDashboard>
 )

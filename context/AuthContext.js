@@ -1,12 +1,12 @@
-import { auth } from '@/firebase/config'
-import { onAuthStateChanged } from 'firebase/auth'
+import firebase_app from '@/firebase/config'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const Context = createContext()
+const auth = getAuth(firebase_app)
 
 export const AuthContext = ({children}) => {
   const [ user, setUser ] = useState(null)
-  const [adminType, setAdminType] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -26,7 +26,6 @@ export const AuthContext = ({children}) => {
     <Context.Provider
         value={{
           user, setUser,
-          adminType, setAdminType
         }}
     >{loading ? <div>Loading...</div> : children}</Context.Provider>  
   )

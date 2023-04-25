@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const EmployerSignUp = () => {
   return (
-    <div className=' bg-slate-50 w-full md:w-3/4 md:flex rounded-md shadow-md'>
+    <div className=' bg-slate-50 w-full  m-4 md:w-3/4 md:flex rounded-md shadow-md'>
         <div className='flex my-12 flex-col flex-1 gap-12 items-center'>
             <Image className=' h-auto w-36' src="/ukc-logo-color.png" width={400} height={200} alt='logo' />
             <Image className=' h-auto w-3/5 mt-40' src="/svg-signup.svg" width={400} height={200} alt='logo' />
@@ -35,7 +36,7 @@ const EmployerSignUp = () => {
                         <button className=' bg-sky-600 w-full h-min py-2 px-8 text-slate-50 rounded-md shadow-md'>Sign Up</button>
                     </div>
                     <div className=' mt-4 flex justify-center'>
-                        <button className='h-min py-2 px-8 text-slate-400'>Already a member? Sign In</button>
+                        <Link href="/employer/signin" className='h-min py-2 px-8 text-slate-400'>Already a member? Sign In</Link>
                     </div>
                 </div>
             </form>

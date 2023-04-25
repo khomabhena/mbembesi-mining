@@ -1,16 +1,17 @@
-import { signInWithEmailAndPassword } from "firebase/auth"
-import { auth } from "./config"
 
-const signIn = async (email, password) => {
-  let result = null, error = null
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import firebase_app from "./config";
 
-  try {
-    result = await signInWithEmailAndPassword(auth, email, password)
-  } catch (err) {
-    error = err
-  }
+const auth = getAuth(firebase_app);
 
-  return { result, error }
+export default async function signIn(email, password) {
+    let result = null,
+        error = null;
+    try {
+        result = await signInWithEmailAndPassword(auth, email, password);
+    } catch (e) {
+        error = e;
+    }
+
+    return { result, error };
 }
-
-export default signIn

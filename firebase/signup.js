@@ -1,16 +1,17 @@
-import { createUserWithEmailAndPassword } from "firebase/auth"
-import { auth } from "./config"
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import firebase_app from "./config";
 
-const signUp = async (email, password) => {
-  let result = null, error = null
+const auth = getAuth(firebase_app);
 
-  try {
-    result = await createUserWithEmailAndPassword(auth, email, password)
-  } catch (err) {
-    error = err
-  }
 
-  return { result, error }
+export default async function signUp(email, password) {
+    let result = null,
+        error = null;
+    try {
+        result = await createUserWithEmailAndPassword(auth, email, password);
+    } catch (e) {
+        error = e;
+    }
+
+    return { result, error };
 }
-
-export default signUp

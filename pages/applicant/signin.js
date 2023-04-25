@@ -1,4 +1,5 @@
 import ApplicantSignIn from '@/components/Applicant/signin'
+import { AuthContext } from '@/context/AuthContext'
 import React from 'react'
 
 const SignIn = () => {
