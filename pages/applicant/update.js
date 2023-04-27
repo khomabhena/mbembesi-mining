@@ -8,6 +8,7 @@ const Update = () => {
   const { setActiveLink } = useStateContext()
   useEffect(() => {
     setActiveLink('/applicant/update')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -7,6 +7,7 @@ const Experience = () => {
   const { setActiveLink } = useStateContext()
   useEffect(() => {
     setActiveLink("/applicant/experience")
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

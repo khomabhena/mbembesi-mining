@@ -8,6 +8,7 @@ const Qualifications = () => {
 
   useEffect(() => {
     setActiveLink("/applicant/qualifications")
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -8,9 +8,9 @@ import React, { useEffect, useState } from 'react'
 
 const Applications = () => {
   const { user } = useAuthContext()
-  const { setActiveLink } = useStateContext()
   const [data, setData] = useState(null)
-
+  const { setActiveLink } = useStateContext()
+  
   useEffect(() => {
     setActiveLink("/applicant/applications")
     const getData = async () => {
@@ -26,6 +26,7 @@ const Applications = () => {
     }
 
     getData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
