@@ -8,10 +8,11 @@ import React, { useState, useEffect } from 'react'
 
 const Profile = () => {
   const { user } = useAuthContext()
-  const { expanded } = useStateContext()
+  const { expanded, setActiveLink } = useStateContext()
   const [data, setData] = useState(null)
 
   useEffect(() => {
+    setActiveLink("/applicant/profile")
     const getData = async () => {
       let { result, error } = await FirebaseStorage().getData('applicants', user.email)
       

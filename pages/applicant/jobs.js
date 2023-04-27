@@ -1,15 +1,17 @@
 import JobCard from '@/components/Applicant/job-card'
 import ApplicantDashboard from '@/components/Dashboard/applicant-dashboard'
 import { useAuthContext } from '@/context/AuthContext'
-import { StateContext } from '@/context/StateContext'
+import { StateContext, useStateContext } from '@/context/StateContext'
 import { FirebaseStorage } from '@/firebase/fetch-data'
 import React, { useEffect, useState } from 'react'
 
 const Jobs = () => {
   const {user} = useAuthContext()
   const [data, setData] = useState(null)
+  const { setActiveLink } = useStateContext()
 
   useEffect(() => {
+    setActiveLink("/applicant/jobs")
     const getData = async () => {
       let jobsArray = []
       let { result, error } = await FirebaseStorage().getAllData('jobs')
