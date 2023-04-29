@@ -3,18 +3,17 @@ import firebase_app from "./config"
 
 const db = getFirestore(firebase_app)
 
-const getDocument = async (collection, id) => {
-    let docRef = doc(db, collection, id)
-
+const getDataFirebase = async (path, id) => {
     let result = null, error = null
 
-    try {
-        result = await getDoc(docRef)
-    } catch (err) {
-        error = err
-    }
+    const snapshot = await getDoc(doc(db, path, id))
+
+    if (snapshot.exists())
+        result = snapshot.data()
+    else
+        error = "No data found"
 
     return { result, error }
 }
 
-export default getDocument
+export default getDataFirebase

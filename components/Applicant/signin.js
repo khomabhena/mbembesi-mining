@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { Oval } from 'react-loader-spinner'
+import { toastSuccess } from '../toast'
 
 const ApplicantSignIn = () => {
     const [email, setEmail] = useState('')

@@ -14,14 +14,14 @@ const ProfileOverview = ({ data }) => {
       {/* Education */}
       <div>
         <div className='self-start font-medium text-lg
-              text-slate-600'>Education</div>
+              text-slate-600'>Qualifications</div>
               {
-                data?.qualifications.map((item, index) => (
+                data?.qualifications?.map((item, index) => (
                   <EducationLayout 
                     key={index} 
                     letter={item.degree.charAt(0)} 
                     title={item.degree}
-                    sub={item.institution + " - (" + item.yearStart.substring(0, 4) + " - " + item.yearEnd.substring(0, 4) + ")"}
+                    sub={item.institution + " - (" + item.yearStart + " - " + item.yearEnd + ")"}
                     text={item.intro} />
                 ))
               }
@@ -32,12 +32,12 @@ const ProfileOverview = ({ data }) => {
         <div className='self-start font-medium text-lg
               text-slate-600'>Experiences</div>
               {
-                data?.experience.map((item, index) => (
+                data?.experience?.map((item, index) => (
                   <EducationLayout 
                     key={index} 
                     letter={item.title.charAt(0)} 
                     title={item.title}
-                    sub={item.company + " - (" + item.yearStart.substring(0, 4) + " - " + item.yearEnd.substring(0, 4) + ")"}
+                    sub={item.company + " - (" + item.yearStart + " - " + item.yearEnd + ")"}
                     text={item.intro} />
                 ))
               }

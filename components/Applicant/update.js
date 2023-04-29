@@ -14,12 +14,9 @@ const UpdateApplicant = () => {
     const { user } = useAuthContext()
     let [data, setData] = useState(null)
     const [profile, setProfile] = useState('')
-    const [profileUrl, setProfileUrl] = useState('')
-    const [cv, setCv] = useState('')
-    const [cvUrl, setCvUrl] = useState('')
-    const [id, setId] = useState('')
-    const [idUrl, setIdUrl] = useState('')
     const [loading, setLoading] = useState(false)
+    const [cv, setCv] = useState('')
+    const [id, setId] = useState('')
 
     const refFirstName = useRef('')
     const refLastName = useRef('')
@@ -54,11 +51,8 @@ const UpdateApplicant = () => {
             refPhone.current.value = result.phone
             refWhatsApp.current.value = result.whatsApp
             setProfile(result.profile)
-            setProfileUrl(result.profileUrl)
             setId(result.passport)
-            setIdUrl(result.passportUrl)
             setCv(result.cv)
-            setCvUrl(result.cvUrl)
 
             setData(result)
         }
@@ -71,10 +65,6 @@ const UpdateApplicant = () => {
         setLoading(true)
 
         uploadProfile(refProfile.current.files[0])
-        // uploadCv(refCV.current.files[0])
-        // uploadId(refID.current.files[0])
-        // uploadData()
-        setLoading(true)
     }
 
     const uploadProfile = async (file) => {
@@ -84,7 +74,7 @@ const UpdateApplicant = () => {
             const { result, error } = await uploadFileData(user.email, file, "applicants", user.email, getNewData(), 'profileUrl', 'profile')
             
             if (error !== null) {
-                return toastError(error.message)
+                toastError("Profile upload failed!")
             } else {
                 toastSuccess("Profile picture uploaded")
             }
@@ -99,7 +89,7 @@ const UpdateApplicant = () => {
             const { result, error } = await uploadFileData(user.email, file, "applicants", user.email, getNewData(), 'cvUrl', 'cv')
             
             if (error !== null) {
-                return toastError(error.message)
+                toastError("CV upload failed!")
             } else {
                 toastSuccess("CV uploaded")
             }
@@ -114,7 +104,7 @@ const UpdateApplicant = () => {
             const { result, error } = await uploadFileData(user.email, file, "applicants", user.email, getNewData(), 'passportUrl', 'passport')
             
             if (error !== null) {
-                return toastError(error.message)
+                toastError("ID/Passport upload failed")
             } else {
                 toastSuccess("ID/Passport uploaded")
             }
@@ -141,19 +131,16 @@ const UpdateApplicant = () => {
                 lastName: refLastName.current.value,
                 type: refType.current.value,
                 country: refCountry.current.value,
-                // profile: profile,
+                
                 intro: refIntro.current.value,
                 languages: refLanguages.current.value.split(','),
                 address: refAddress.current.value,
-                // cv: cv,
-                // id: id,
+                
                 facebook: refFacebook.current.value,
                 twitter: refTwitter.current.value,
                 phone: refPhone.current.value,
                 whatsApp: refWhatsApp.current.value,
-                // profileUrl: profileUrl,
-                // cvUrl: cvUrl,
-                // idUrl: idUrl,
+               
             }
     }
 

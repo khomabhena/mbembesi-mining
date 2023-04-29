@@ -8,6 +8,7 @@ import { AiOutlineDownload } from 'react-icons/ai'
 import { IoLogoWhatsapp, IoMdCall } from 'react-icons/io'
 
 const ProfileDetailsEmployer = () => {
+
   return (
     <div className='flex flex-col items-center gap-8 mt-8 w-full'>
         <Image className='h-24 w-24 shadow-lg ring ring-sky-500 object-cover rounded-full' 
