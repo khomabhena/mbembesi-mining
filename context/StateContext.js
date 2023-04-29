@@ -6,6 +6,8 @@ export const StateContext = ({children}) => {
     const [jobDetails, setJobDetails] = useState(null)
     const [applicantDetails, setApplicantDetails] = useState(null)
 
+    const [jobDetailsEmployer, setJobDetailsEmployer] = useState(null)
+
     const [expanded, setExpanded] = useState(false)
     const [detailsExpanded, setDetailsExpanded] = useState(false)
     const [applicantDetailsExpanded, setApplicantDetailsExpanded] = useState(false)
@@ -23,6 +25,7 @@ export const StateContext = ({children}) => {
   return (
     <Context.Provider
         value={{
+          jobDetailsEmployer, setJobDetailsEmployer,
           jobDetails, setJobDetails, applicantDetails, setApplicantDetails,
           expanded, setExpanded, applicantDetailsExpanded, setApplicantDetailsExpanded, 
           applicationExpanded, setApplicationExpanded,

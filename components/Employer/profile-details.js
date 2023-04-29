@@ -7,14 +7,14 @@ import { GrNotes } from 'react-icons/gr'
 import { AiOutlineDownload } from 'react-icons/ai'
 import { IoLogoWhatsapp, IoMdCall } from 'react-icons/io'
 
-const ProfileDetailsEmployer = () => {
+const ProfileDetailsEmployer = ({ data }) => {
 
   return (
     <div className='flex flex-col items-center gap-8 mt-8 w-full'>
         <Image className='h-24 w-24 shadow-lg ring ring-sky-500 object-cover rounded-full' 
-          src="/person.jpg" width={200} height={200} alt='picture' />
+          src={data?.logoUrl} width={200} height={200} alt='logo' />
         <div>
-          <div className='font-semibold text-xl text-slate-600' >UK Care Connection</div>
+          <div className='font-semibold text-xl text-slate-600' >{data?.companyName}</div>
         </div>
         
         {/* Social Icons */}
@@ -31,19 +31,19 @@ const ProfileDetailsEmployer = () => {
         <div className='flex flex-col gap-4 w-full '>
           <div className='flex w-full justify-between'>
             <div className=' font-medium text-slate-600'>Owner</div>
-            <div className=' text-slate-500 text-base'>Brian MacFee</div>
+            <div className=' text-slate-500 text-base'>{data?.name}</div>
           </div>
           <div className='flex w-full justify-between'>
             <div className=' font-medium text-slate-600'>Employees</div>
-            <div className=' text-slate-500 text-base'>50 to 10</div>
+            <div className=' text-slate-500 text-base'>{data?.employees}</div>
           </div>
           <div className='flex w-full justify-between'>
             <div className=' font-medium text-slate-600'>Location</div>
-            <div className=' text-slate-500 text-base'>Zimbabwe</div>
+            <div className=' text-slate-500 text-base'>{data?.country}</div>
           </div>
           <div className='flex w-full justify-between'>
             <div className=' font-medium text-slate-600'>Website</div>
-            <div className=' text-slate-500 text-base'>ukcareconnection.com</div>
+            <div className=' text-slate-500 text-base'>{data?.website}</div>
           </div>
         </div>
         

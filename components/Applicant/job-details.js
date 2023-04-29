@@ -29,7 +29,7 @@ const JobDetails = () => {
         <div className='mt-8 md:flex gap-8'>
             <div className='flex gap-8'>
                 <div>
-                    <div className='text-slate-600 text-lg font-semibold'>5 years</div>
+                    <div className='text-slate-600 text-lg font-semibold'>{jobDetails?.experience}</div>
                     <div className='text-slate-400 text-xs'>Experience</div>
                 </div>
                 <div>
