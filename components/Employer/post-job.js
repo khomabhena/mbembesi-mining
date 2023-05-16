@@ -5,6 +5,7 @@ import Spinner from '../spinner'
 import { toastError, toastNormal, toastSuccess } from '../toast'
 import updateData from '@/firebase/update-data'
 import setDataFirebase from '@/firebase/set-data'
+import getUniqueId from '@/firebase/get-unique-id'
 
 const PostJobEmployer = () => {
     const { user } = useAuthContext()
@@ -52,7 +53,9 @@ const PostJobEmployer = () => {
             skills: refSkills.current.value,
             title: refTitle.current.value,
             type: refType.current.value,
-            date: new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear()
+            jobUid: getUniqueId('jobs'),
+            email: user.email,
+            date: "" + new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear()
             
         }
 
@@ -61,25 +64,45 @@ const PostJobEmployer = () => {
             toastNormal("Uploading job")
             jobs = []
             jobs.push(newData)
+            console.log(newData)
+            
             const { result, error } = await setDataFirebase('jobs', user.email, {jobs: jobs})
             
             if (error)
-                toastError("Job upload failed")
-            else 
+                toastError(`Job upload failed 1: ${error.message}`)
+            else {
                 toastSuccess("Jobs upload successful")
+                deleteValues()
+            }
             
         } else {
+            // console
             const job = data.jobs
             job.unshift(newData)
             const { result, error } = await updateData('jobs', user.email, {jobs: job})
             
             if (error)
-                toastError("Job upload failed")
-            else    
+                toastError(`Job upload failed 2: ${error.code}`)
+            else {
                 toastSuccess("Job upload successful")
+                deleteValues()
+            }
         }
         setLoading(false)
     } 
+
+    const deleteValues = () => {
+        refCountry.current.value = ''
+        refDescription.current.value = ''
+        refExperience.current.value = ''
+        refProfession.current.value = ''
+        refQualifications.current.value = ''
+        refResponsibilities.current.value = ''
+        refSalary.current.value = ''
+        refSkills.current.value = ''
+        refTitle.current.value = ''
+        refType.current.value = ''
+    }
 
   return (
     

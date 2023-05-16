@@ -5,7 +5,8 @@ const Context = createContext()
 export const StateContext = ({children}) => {
     const [jobDetails, setJobDetails] = useState(null)
     const [applicantDetails, setApplicantDetails] = useState(null)
-
+    const [webSidebar, setWebSidebar] = useState(false)
+ 
     const [jobDetailsEmployer, setJobDetailsEmployer] = useState(null)
 
     const [expanded, setExpanded] = useState(false)
@@ -25,6 +26,7 @@ export const StateContext = ({children}) => {
   return (
     <Context.Provider
         value={{
+          webSidebar, setWebSidebar,
           jobDetailsEmployer, setJobDetailsEmployer,
           jobDetails, setJobDetails, applicantDetails, setApplicantDetails,
           expanded, setExpanded, applicantDetailsExpanded, setApplicantDetailsExpanded, 

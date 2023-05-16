@@ -12,7 +12,7 @@ const ProfileDetailsEmployer = ({ data }) => {
   return (
     <div className='flex flex-col items-center gap-8 mt-8 w-full'>
         <Image className='h-24 w-24 shadow-lg ring ring-sky-500 object-cover rounded-full' 
-          src={data?.logoUrl} width={200} height={200} alt='logo' />
+          src={data?.logoUrl || "/person.jpg"} width={200} height={200} alt='picture' />
         <div>
           <div className='font-semibold text-xl text-slate-600' >{data?.companyName}</div>
         </div>

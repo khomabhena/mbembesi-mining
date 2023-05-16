@@ -85,7 +85,7 @@ const UpdateEmployer = () => {
                 toastSuccess("ID/Passport uploaded successfully")
         }
 
-        uploadFileData()
+        uploadData()
     }
 
     const uploadData = async () => {
@@ -137,10 +137,11 @@ const UpdateEmployer = () => {
                 <div className=' flex flex-1 flex-col gap-2'>
                     <label className=' text-slate-500'>Employees</label>
                     <select ref={refEmployees} className=' ring-1 text-slate-600 ring-slate-300 rounded-sm px-4 py-2 bg-transparent'>
-                        <option value='Nurse'>1 to 9</option>
-                        <option value='Nurse Aid'>10 to 29</option>
-                        <option value='Adult Care'>30 to 49</option>
-                        <option value='Hospice Care'>Over 50</option>
+                        <option value='None' selected disabled>Select number of employees</option>
+                        <option value='1 to 9'>1 to 9</option>
+                        <option value='10 to 29'>10 to 29</option>
+                        <option value='30 to 49'>30 to 49</option>
+                        <option value='Over 50'>Over 50</option>
                     </select>
                 </div>
             </div>
@@ -148,6 +149,7 @@ const UpdateEmployer = () => {
                 <div className='flex flex-1 flex-col gap-2'>
                     <label className=' text-slate-500'>Upload Company Logo</label>
                     <input ref={refLogo} className=' ring-1 text-slate-600 ring-slate-300 rounded-sm px-4 py-2 bg-transparent' type="file" placeholder='Enter your first name' accept='image/*' />
+                    <label className=' text-slate-400 text-xs'>{logo}</label>
                 </div>
             </div>
 
@@ -171,6 +173,7 @@ const UpdateEmployer = () => {
                 <div className='flex flex-1 flex-col gap-2'>
                     <label className=' text-slate-500'>National ID/Passport</label>
                     <input ref={refPassport} className=' ring-1 text-slate-600 ring-slate-300 rounded-sm px-4 py-2 bg-transparent' type="file" accept='image/*, .pdf, .doc, .docx' />
+                    <label className=' text-slate-400 text-xs'>{passport}</label>
                 </div>
             </div>
 

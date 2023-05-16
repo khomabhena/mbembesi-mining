@@ -1,8 +1,14 @@
+import { useAuthContext } from '@/context/AuthContext'
 import Image from 'next/image'
 import React from 'react'
 import { FiSettings } from 'react-icons/fi'
 
 const Navbar = ({title}) => {
+
+  const { logout } = useAuthContext()
+
+
+
   return (
     <div className=' bg-slate-50 shadow-md px-16 py-4 md:py-0 md:h-24 
       flex flex-col md:flex-row justify-center md:justify-between md:items-center gap-4'>
@@ -14,7 +20,7 @@ const Navbar = ({title}) => {
           <div className='font-medium text-slate-500'>Hi, Kholwani</div>
         </div>
         <div>
-          <div><FiSettings className=' text-slate-500 text-xl cursor-pointer' /></div>
+          <div onClick={() => logout}><FiSettings className=' text-slate-500 text-xl cursor-pointer' /></div>
         </div>
       </div>
     </div>

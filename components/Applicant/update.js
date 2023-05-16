@@ -50,6 +50,7 @@ const UpdateApplicant = () => {
             refTwitter.current.value = result.twitter
             refPhone.current.value = result.phone
             refWhatsApp.current.value = result.whatsApp
+            
             setProfile(result.profile)
             setId(result.passport)
             setCv(result.cv)

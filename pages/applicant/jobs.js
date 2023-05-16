@@ -1,5 +1,6 @@
 import JobCard from '@/components/Applicant/job-card'
 import ApplicantDashboard from '@/components/Dashboard/applicant-dashboard'
+import NoDataFound from '@/components/no-data-found'
 import { useAuthContext } from '@/context/AuthContext'
 import { StateContext, useStateContext } from '@/context/StateContext'
 import { FirebaseStorage } from '@/firebase/fetch-data'
@@ -42,7 +43,7 @@ const Jobs = () => {
           <JobCard
             data={item}
             key={index} />
-        ))
+        )) || <NoDataFound message='No Jobs Found' />
       }
     </div>
   )

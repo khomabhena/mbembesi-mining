@@ -49,7 +49,7 @@ const ProfileOverview = ({ data }) => {
               text-slate-600'>Spoken Languages</div>
         <div className='flex gap-4 flex-wrap mt-4'>
           {
-            data?.languages.map((item, index) => (
+            data?.languages?.map((item, index) => (
               <div key={index} className='flex items-center w-min
                 justify-center text-slate-700 px-4 py-1 bg-sky-600/40
                 rounded-md'>{item}</div>

@@ -1,5 +1,6 @@
 import EmployerDashboard from '@/components/Dashboard/employer-dashboard'
 import JobCardEmployer from '@/components/Employer/job-card'
+import NoDataFound from '@/components/no-data-found'
 import { useAuthContext } from '@/context/AuthContext'
 import { useStateContext } from '@/context/StateContext'
 import getDataFirebase from '@/firebase/getData'
@@ -31,10 +32,8 @@ const Jobs = () => {
       {
         data?.map((item, index) => (
           <JobCardEmployer key={index} data={item} />
-        ))
+        )) || <NoDataFound message='No Jobs Found' />
       }
-      {/* <JobCardEmployer /> */}
-      {/* <JobCardEmployer /> */}
     </div>
   )
 }

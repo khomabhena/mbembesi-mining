@@ -9,6 +9,11 @@ export const AuthContext = ({children}) => {
   const [ user, setUser ] = useState(null)
   const [loading, setLoading] = useState(true)
 
+  
+  const logout = () => {
+    auth.signOut()
+  }
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) 
@@ -25,7 +30,7 @@ export const AuthContext = ({children}) => {
   return (
     <Context.Provider
         value={{
-          user, setUser,
+          user, setUser, logout
         }}
     >{loading ? <div>Loading...</div> : children}</Context.Provider>  
   )

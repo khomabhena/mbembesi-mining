@@ -4,17 +4,23 @@ import ApplicantDashboard from '@/components/Dashboard/applicant-dashboard'
 import { useAuthContext } from '@/context/AuthContext'
 import { useStateContext } from '@/context/StateContext'
 import { FirebaseStorage } from '@/firebase/fetch-data'
+import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 
 const Profile = () => {
   const { user } = useAuthContext()
   const { expanded, setActiveLink } = useStateContext()
   const [data, setData] = useState(null)
-
+  const router = useRouter()
   useEffect(() => {
+    if (user == null) {
+      
+      toastError("Please Log In")
+      // return
+    }
     setActiveLink("/applicant/profile")
     const getData = async () => {
-      let { result, error } = await FirebaseStorage().getData('applicants', user.email)
+      let { result, error } = await FirebaseStorage().getData('applicants', user?.email)
       
       if (error) {
         return console.log(error)

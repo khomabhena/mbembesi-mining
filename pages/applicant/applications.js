@@ -1,6 +1,7 @@
 import ApplicationCard from '@/components/Applicant/application-card'
 import JobCard from '@/components/Applicant/job-card'
 import ApplicantDashboard from '@/components/Dashboard/applicant-dashboard'
+import NoDataFound from '@/components/no-data-found'
 import { useAuthContext } from '@/context/AuthContext'
 import { useStateContext } from '@/context/StateContext'
 import { FirebaseStorage } from '@/firebase/fetch-data'
@@ -36,7 +37,7 @@ const Applications = () => {
           <ApplicationCard
             data={item} 
             key={index} />
-        ))
+        )) || <NoDataFound message='No Applications Found' />
       }
     </div>
   )
