@@ -49,7 +49,7 @@ const ApplicantSignIn = () => {
             </div>
 
             {/* Error */}
-            <div className={`${error === '' ? 'hidden' : 'block'} bg-red-500 text-center py-4 mx-12 rounded-md mt-4 bg-opacity-80 text-slate-200`}>
+            <div className={`${error === '' ? 'hidden' : 'block'} bg-red-500 text-center py-4 px-12 rounded-md mt-4 bg-opacity-80 text-slate-200`}>
                 {error}
             </div>
 
