@@ -21,8 +21,8 @@ const Navbar = () => {
             {/* <Link href='/'>
                 <Image className=' h-full w-auto py-6 md:py-4' src='/logo-color.png' alt='' width={200} height={150} />
             </Link> */}
-            <h1 className=' font-extrabold text-2xl text-emerald-600'>MBEMBESI MINING HOUSE</h1>
-            <ol className=' hidden md:flex gap-12 text-emerald-600 items-center text-lg'>
+            <h1 className=' font-extrabold text-xl text-emerald-600'>MBEMBESI MINING HOUSE</h1>
+            <ol className=' hidden md:flex gap-4 text-slate-500 items-center text-md'>
                     {
                         getNavMenu().map(({name, link}, index) => (
                             <li className=' cursor-pointer hover:text-lg py-4 hover:border-b-2 hover:border-sky-900' key={index}>

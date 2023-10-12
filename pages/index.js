@@ -33,11 +33,11 @@ export default function Home() {
           <SectionDouble data={getDataMission()} />
           <Section data={getDataValues()} />
           <SectionSingle dot={false} data={getDataWhatWeDo()} />
-          <SectionTwo card={1} title='Business Overview' data={getDataBusinessOverview()} />
-          <SectionManagement card={2} title='Management Team' data={getDataManagement()} />
+          <SectionTwo id='overview' card={1} title='Business Overview' data={getDataBusinessOverview()} />
+          <SectionManagement id='team' card={2} title='Management Team' data={getDataManagement()} />
           <SectionSingle dot={true} data={getDataCSR()} />
           <SectionMap data={getDataMines()} />
-          <SectionGallery card={2} title='Our Projects' data={getDataGallery()} />
+          <SectionGallery id='projects' card={2} title='Our Projects' data={getDataGallery()} />
         </Layout>
       </StateContext>
     </div>

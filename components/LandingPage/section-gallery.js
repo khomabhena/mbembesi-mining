@@ -3,9 +3,9 @@ import Card from './card'
 import CardManagement from './card-management'
 import CardGallery from './card-gallery'
 
-const SectionGallery= ({card, title, data}) => {
+const SectionGallery= ({id, card, title, data}) => {
   return (
-    <div className=' flex flex-col items-center py-24 min-h-screen'>
+    <div id={id} className=' flex flex-col items-center py-24 min-h-screen'>
         <h1 className=' text-4xl font-semibold text-emerald-600'>{title}</h1>
         <div className=' grid grid-cols-1 md:grid-cols-3 mt-12 px-24 gap-8'>
             {

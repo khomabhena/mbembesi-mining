@@ -9,13 +9,33 @@ const getNavMenu = () => {
             link: '#mission'
         },
         {
-            name: 'Services',
-            link: '#about'
+            name: 'Values',
+            link: '#values'
         },
         {
-            name: 'Sign Up',
-            link: '#about'
-        }
+            name: 'Services',
+            link: '#services'
+        },
+        {
+            name: 'Overview',
+            link: '#overview'
+        },
+        {
+            name: 'Team',
+            link: '#team'
+        },
+        {
+            name: 'Sustainability',
+            link: '#sustainability'
+        },
+        {
+            name: 'Mines',
+            link: '#mines'
+        },
+        {
+            name: 'Projects',
+            link: '#projects'
+        },
     ]
 }
 
