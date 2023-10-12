@@ -4,7 +4,7 @@ import Sidebar from './sidebar'
 
 const Layout = ({ children }) => {
   return (
-    <div className=' relative min-h-screen '>
+    <div className=' relative min-h-screen text-emerald-600'>
         <Navbar />
         <Sidebar />
         {children}

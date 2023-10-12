@@ -11,23 +11,23 @@ const HeroSection = () => {
     }, [])
 
   return (
-    <div className=' relative bg-slate-100 pt-24 grid grid-cols-1 md:grid-cols-2 min-h-screen'>
+    <div className=' relative bg-slate-50 pt-24 grid grid-cols-1 md:grid-cols-2 min-h-screen'>
         <div className=' flex flex-col pl-8 md:pl-24 justify-center h-full'>
-            <h1 className=' mt-12 md:mt-0 text-5xl md:text-7xl font-semibold text-slate-600'>
+            <h1 className=' mt-12 md:mt-0 text-4xl md:text-5xl font-medium '>
                 {data?.title}
             </h1>
-            <h1 className=' text-5xl md:text-7xl font-semibold text-slate-600'>
+            <h1 className=' text-4xl md:text-6xl font-semibold '>
                 {data?.title2}
             </h1>
-            <p className=' mt-8 text-xl md:text-2xl text-slate-600'>
+            <p className=' mt-4 text-xl md:text-2xl text-slate-500 '>
                 {data?.subTitle}
             </p>
-            <Link href={getHeroSectionData().link} className=' text-slate-100 self-start mt-8 bg-sky-900 px-8 py-4 rounded-md'>
+            {/* <Link href={getHeroSectionData().link} className=' text-slate-100 self-start mt-8 bg-sky-900 px-8 py-4 rounded-md'>
                 {data?.buttonName}
-            </Link>
+            </Link> */}
         </div>
-        <div className=' mt-12 md:mt-0 self-end'>
-            <Image className='w-full px-8 h-auto' src={data?.imageLink} alt='' width={300} height={200} />
+        <div className=' mt-12 px-8 md:mt-0 self-center'>
+            <Image className='w-full h-auto rounded-tr-full' src={data?.imageLink} alt='hero image' width={1200} height={1000} />
         </div>
     </div>
   )

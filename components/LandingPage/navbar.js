@@ -18,18 +18,21 @@ const Navbar = () => {
         
         {/* Main Navbar */}
         <div className='flex z-50 shadow-md justify-between items-center px-8 md:px-24 fixed top-0 left-0 right-0 h-24'>
-            <Link href='/'>
+            {/* <Link href='/'>
                 <Image className=' h-full w-auto py-6 md:py-4' src='/logo-color.png' alt='' width={200} height={150} />
-            </Link>
-            <ol className=' hidden md:flex gap-12 items-center text-sky-900 text-lg'>
+            </Link> */}
+            <h1 className=' font-extrabold text-2xl text-emerald-600'>MBEMBESI MINING HOUSE</h1>
+            <ol className=' hidden md:flex gap-12 text-emerald-600 items-center text-lg'>
                     {
                         getNavMenu().map(({name, link}, index) => (
-                            <li className=' cursor-pointer hover:text-lg py-4 hover:border-b-2 hover:border-sky-900' key={index}>{name}</li>
+                            <li className=' cursor-pointer hover:text-lg py-4 hover:border-b-2 hover:border-sky-900' key={index}>
+                                <a href={link}>{name}</a>
+                            </li>
                         ))
                     }
             </ol>
             <AiOutlineMenu onClick={handleMobileMenu} className=' md:hidden cursor-pointer' size={24} />
-            <Link href='/employer/signin' className=' hidden md:flex bg-sky-900 text-slate-100 w-fit self-center px-8 py-2 rounded-md'>{getButtonName()}</Link>
+            {/* <Link href='/employer/signin' className=' hidden md:flex bg-sky-900 text-slate-100 w-fit self-center px-8 py-2 rounded-md'>{getButtonName()}</Link> */}
         </div>
     </div>
   )

@@ -9,6 +9,19 @@ import getDataServices from '@/data/data-services'
 import getDataSignUp from '@/data/data-sign-up'
 import Layout from '@/components/LandingPage/layout'
 import { StateContext } from '@/context/StateContext'
+import SectionDouble from '@/components/LandingPage/section-double'
+import getDataMission from '@/data/data-mission'
+import getDataValues from '@/data/data-values'
+import SectionSingle from '@/components/LandingPage/section-single'
+import getDataWhatWeDo from '@/data/data-what-we-do'
+import getDataBusinessOverview from '@/data/data-overview'
+import getDataManagement from '@/data/data-management'
+import SectionManagement from '@/components/LandingPage/section-management'
+import getDataCSR from '@/data/data-csr'
+import SectionMap from '@/components/LandingPage/section-map'
+import getDataMines from '@/data/data-mines'
+import SectionGallery from '@/components/LandingPage/section-gallery'
+import getDataGallery from '@/data/data-gallery'
 
 export default function Home() {
   return (
@@ -17,9 +30,14 @@ export default function Home() {
         <Layout>
           <HeroSection />
           <Section data={getDataAbout()} />
-          <Section data={getDataLogin()} />
-          <SectionTwo title='Our Services' data={getDataServices()} />
-          <Section data={getDataSignUp()} />
+          <SectionDouble data={getDataMission()} />
+          <Section data={getDataValues()} />
+          <SectionSingle dot={false} data={getDataWhatWeDo()} />
+          <SectionTwo card={1} title='Business Overview' data={getDataBusinessOverview()} />
+          <SectionManagement card={2} title='Management Team' data={getDataManagement()} />
+          <SectionSingle dot={true} data={getDataCSR()} />
+          <SectionMap data={getDataMines()} />
+          <SectionGallery card={2} title='Our Projects' data={getDataGallery()} />
         </Layout>
       </StateContext>
     </div>

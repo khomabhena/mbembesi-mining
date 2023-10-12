@@ -5,8 +5,8 @@ const getNavMenu = () => {
             link: '#about'
         },
         {
-            name: 'Login',
-            link: '#about'
+            name: 'Mission',
+            link: '#mission'
         },
         {
             name: 'Services',

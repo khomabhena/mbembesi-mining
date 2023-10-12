@@ -2,11 +2,11 @@ import React from 'react'
 
 const getHeroSectionData = () => {
   return {
-    title: 'Hire The Best',
-    title2: 'Care Givers',
-    subTitle: "Join a network of the world's best care givers & get full-time, long-term care giving jobs with better compensation and career growth.",
+    title: 'Unparalleled',
+    title2: 'Mining Expertise',
+    subTitle: "We specialize in mining solutions and mineral resource development.",
     buttonName: 'Apply for jobs',
-    imageLink: '/svg-nurse.svg',
+    imageLink: '/hero.jpg',
     link: '/applicant/signin',
   }
 }
