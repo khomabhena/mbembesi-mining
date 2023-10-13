@@ -36,6 +36,26 @@ const getDataGallery = () => {
       imageLink: '/img9.jpg',
       caption: 'Add operation caption',
     },
+    {
+      imageLink: '/img10.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img11.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img12.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img13.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img14.jpg',
+      caption: 'Add operation caption',
+    },
   ]
 }
 

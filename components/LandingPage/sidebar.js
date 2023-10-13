@@ -19,11 +19,13 @@ const Sidebar = () => {
                 <ol className=' flex flex-col gap-12 items-center text-slate-200'>
                     {
                         getNavMenu().map(({name, link}, index) => (
-                            <li className=' cursor-pointer hover:text-lg hover:font-semibold' key={index}>{name}</li>
+                            <li onClick={handleMobileMenu} className=' cursor-pointer hover:text-lg hover:font-semibold' key={index}>
+                                <a href={link}>{name}</a>
+                            </li>
                         ))
                     }
                 </ol>
-                <button className=' bg-sky-700 text-slate-100 w-fit self-center px-8 py-2 rounded-md'>{getButtonName()}</button>
+                {/* <button className=' bg-sky-700 text-slate-100 w-fit self-center px-8 py-2 rounded-md'>{getButtonName()}</button> */}
             </div>
     </div>
   )

@@ -5,6 +5,8 @@ import React, { useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Sidebar from './sidebar'
 import Link from 'next/link'
+import Head from 'next/head'
+import Script from 'next/script'
 
 const Navbar = () => {
     const { setWebSidebar } = useStateContext()
@@ -15,9 +17,10 @@ const Navbar = () => {
 
   return (
     <div className='fixed z-10 h-24 bg-slate-100 left-0 top-0 right-0'>
+        <Script type='text/javascript' src='/static/api.js'></Script>
         
         {/* Main Navbar */}
-        <div className='flex z-50 shadow-md justify-between items-center px-8 md:px-24 fixed top-0 left-0 right-0 h-24'>
+        <div className='flex z-50 shadow-md justify-between items-center px-16 md:px-24 fixed top-0 left-0 right-0 h-24'>
             {/* <Link href='/'>
                 <Image className=' h-full w-auto py-6 md:py-4' src='/logo-color.png' alt='' width={200} height={150} />
             </Link> */}
@@ -33,6 +36,9 @@ const Navbar = () => {
             </ol>
             <AiOutlineMenu onClick={handleMobileMenu} className=' md:hidden cursor-pointer' size={24} />
             {/* <Link href='/employer/signin' className=' hidden md:flex bg-sky-900 text-slate-100 w-fit self-center px-8 py-2 rounded-md'>{getButtonName()}</Link> */}
+        </div>
+        <div id='marquee' className='h-6 flex justify-end text-yellow-400 text-sm items-center bg-slate-900'>
+            
         </div>
     </div>
   )

@@ -22,22 +22,32 @@ import SectionMap from '@/components/LandingPage/section-map'
 import getDataMines from '@/data/data-mines'
 import SectionGallery from '@/components/LandingPage/section-gallery'
 import getDataGallery from '@/data/data-gallery'
+import Head from 'next/head'
+import SectionSlideshow from '@/components/LandingPage/section-slideshow'
+import SectionFooter from '@/components/LandingPage/section-footer'
 
 export default function Home() {
   return (
-    <div className=' relative'>
+    <div className=' relative min-w-full '>
+      <Head>
+        <title></title>
+        <meta name='description' content='a' />
+        <meta property='og:title' content='a' />
+        <link rel='icon' href='/' />
+      </Head>
       <StateContext>
         <Layout>
           <HeroSection />
           <Section data={getDataAbout()} />
           <SectionDouble data={getDataMission()} />
           <Section data={getDataValues()} />
-          <SectionSingle dot={false} data={getDataWhatWeDo()} />
-          <SectionTwo id='overview' card={1} title='Business Overview' data={getDataBusinessOverview()} />
+          {/* <SectionSingle dot={false} data={getDataWhatWeDo()} /> */}
+          {/* <SectionTwo id='overview' card={1} title='Business Overview' data={getDataBusinessOverview()} /> */}
           <SectionManagement id='team' card={2} title='Management Team' data={getDataManagement()} />
           <SectionSingle dot={true} data={getDataCSR()} />
           <SectionMap data={getDataMines()} />
-          <SectionGallery id='projects' card={2} title='Our Projects' data={getDataGallery()} />
+          {/* <SectionGallery id='projects' card={2} title='Our Projects' data={getDataGallery()} /> */}
+          <SectionSlideshow id='projects' title='Our Projects' data={getDataGallery()} />
         </Layout>
       </StateContext>
     </div>

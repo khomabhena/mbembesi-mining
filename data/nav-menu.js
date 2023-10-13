@@ -12,14 +12,14 @@ const getNavMenu = () => {
             name: 'Values',
             link: '#values'
         },
-        {
-            name: 'Services',
-            link: '#services'
-        },
-        {
-            name: 'Overview',
-            link: '#overview'
-        },
+        // {
+        //     name: 'Services',
+        //     link: '#services'
+        // },
+        // {
+        //     name: 'Overview',
+        //     link: '#overview'
+        // },
         {
             name: 'Team',
             link: '#team'

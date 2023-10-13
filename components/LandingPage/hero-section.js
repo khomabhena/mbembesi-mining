@@ -11,7 +11,7 @@ const HeroSection = () => {
     }, [])
 
   return (
-    <div className=' relative bg-slate-50 pt-24 grid grid-cols-1 md:grid-cols-2 min-h-screen'>
+    <div className=' relative bg-slate-50 pt-24 grid grid-cols-1 md:grid-cols-2 min-h-screen min-w-full'>
         <div className=' flex flex-col pl-8 md:pl-24 justify-center h-full'>
             <h1 className=' mt-12 md:mt-0 text-4xl md:text-5xl font-medium '>
                 {data?.title}
@@ -27,8 +27,9 @@ const HeroSection = () => {
             </Link> */}
         </div>
         <div className=' mt-12 px-8 md:mt-0 self-center'>
-            <Image className='w-full h-auto rounded-tr-full' src={data?.imageLink} alt='hero image' width={1200} height={1000} />
+            <Image className='w-full h-auto rounded-tr-full' src={data?.imageLink} alt='hero image' width={900} height={700} />
         </div>
+        
     </div>
   )
 }
