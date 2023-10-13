@@ -15,7 +15,7 @@ const Section = ({data}) => {
             </Link>
         </div>
 
-        <div className=' flex-1 px-8'>
+        <div className=' flex-1 md:px-8'>
             <Image className=' w-full h-auto mt-8 rounded-tl-3xl rounded-br-3xl' src={data?.imageLink} alt='' width={1000} height={800} />
         </div>
 
