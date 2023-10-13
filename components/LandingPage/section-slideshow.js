@@ -13,7 +13,7 @@ const SectionSlideshow= ({id, card, title, data}) => {
     <div id={id} className=' flex flex-col items-center py-24 min-h-screen'>
         <h1 className=' text-4xl font-semibold text-emerald-600'>{title}</h1>
         <div className=' flex justify-center px-8 mt-8'>
-          <Carousel className=' w-3/4 h-96 rounded-md shadow-sm shadow-emerald-600'>
+          <Carousel className=' md:w-5/6 h-96 rounded-md shadow-sm shadow-emerald-600'>
             {
               data?.map((item, index) => (
                 <>
