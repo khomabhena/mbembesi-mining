@@ -1,24 +1,28 @@
 const getDataGallery = () => {
   return [
     {
+      imageLink: '/hero.jpg',
+      caption: 'Add operation caption 1',
+    },
+    {
       imageLink: '/img1.jpg',
-      caption: 'Add operation caption',
+      caption: 'Add operation caption 1',
     },
     {
       imageLink: '/img2.jpg',
-      caption: 'Add operation caption',
+      caption: 'Add operation caption 2',
     },
     {
       imageLink: '/img3.jpg',
-      caption: 'Add operation caption',
+      caption: 'Add operation caption 3',
     },
     {
       imageLink: '/img4.jpg',
-      caption: 'Add operation caption',
+      caption: 'Add operation caption 4',
     },
     {
       imageLink: '/img5.jpg',
-      caption: 'Add operation caption',
+      caption: 'Add operation caption 5',
     },
     {
       imageLink: '/img6.jpg',
@@ -54,6 +58,22 @@ const getDataGallery = () => {
     },
     {
       imageLink: '/img14.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img15.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img16.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img17.jpg',
+      caption: 'Add operation caption',
+    },
+    {
+      imageLink: '/img18.jpg',
       caption: 'Add operation caption',
     },
   ]

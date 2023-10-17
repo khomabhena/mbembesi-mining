@@ -25,6 +25,8 @@ import getDataGallery from '@/data/data-gallery'
 import Head from 'next/head'
 import SectionSlideshow from '@/components/LandingPage/section-slideshow'
 import SectionFooter from '@/components/LandingPage/section-footer'
+import SwiperJS from '@/components/LandingPage/slideshow-swiper'
+import HeroSectionTwo from '@/components/LandingPage/hero-section-two'
 
 export default function Home() {
   return (
@@ -37,7 +39,8 @@ export default function Home() {
       </Head>
       <StateContext>
         <Layout>
-          <HeroSection />
+          {/* <HeroSection /> */}
+          <HeroSectionTwo />
           <Section data={getDataAbout()} />
           <SectionDouble data={getDataMission()} />
           <Section data={getDataValues()} />
