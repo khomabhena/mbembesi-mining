@@ -8,6 +8,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Script from 'next/script'
 import NavbarSocials from './navbar-socials'
+// import { logo } from '/logo.png'
 
 
 const Navbar = () => {
@@ -25,11 +26,13 @@ const Navbar = () => {
             <NavbarSocials />
         </div>
         {/* Main Navbar */}
-        <div className='flex z-50 shadow-md justify-between items-center px-16 md:px-24 fixed top-0 left-0 right-0 h-24'>
+        <div className='flex z-50 shadow-md justify-between items-center pl-2 pr-16 md:px-20 fixed top-0 left-0 right-0 h-24'>
             {/* <Link href='/'>
                 <Image className=' h-full w-auto py-6 md:py-4' src='/logo-color.png' alt='' width={200} height={150} />
             </Link> */}
-            <h1 className=' font-extrabold text-xl text-emerald-600'>MBEMBESI MINING HOUSE</h1>
+            {/* <h1 className=' font-extrabold text-xl text-emerald-600'>
+            </h1> */}
+            <Image className=' h-full w-auto mt-8' src='/logo.png' width={685} height={346} alt='logo' />
             <ol className=' hidden md:flex gap-4 text-slate-500 items-center text-md'>
                 {
                     getNavMenu().map(({name, link}, index) => (
