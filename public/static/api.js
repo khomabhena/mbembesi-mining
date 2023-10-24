@@ -17,7 +17,7 @@ fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
     if (!res.error)
       text += " ******************* GOLD: $" + res.price.toFixed(2) + "" + res.currency + "----Low Price: $" + res.low_price.toFixed(2) + "----Gram 24k: $" + res.price_gram_24k.toFixed(2)
     else 
-      text = "No prices available."
+      text = "Gold Prices not available!"
     
     marquee.textContent = text
     document.getElementById('marquee').appendChild(marquee)
@@ -34,7 +34,7 @@ fetch("https://www.goldapi.io/api/XAG/USD", requestOptions)
     if (!res.error)
       text += " ******************* SILVER: $" + res.price.toFixed(2) + "" + res.currency + "----Low Price: $" + res.low_price.toFixed(2) + "----Gram 24k: $" + res.price_gram_24k.toFixed(2)
     else 
-      text = "No prices available."
+      text = "Gold Prices not available!"
     
     marquee.textContent = text
     document.getElementById('marquee').appendChild(marquee)
@@ -51,7 +51,7 @@ fetch("https://www.goldapi.io/api/XPT/USD", requestOptions)
     if (!res.error)
       text += " ******************* PLATINUM: $" + res.price.toFixed(2) + "" + res.currency + "----Low Price: $" + res.low_price.toFixed(2) + "----Gram 24k: $" + res.price_gram_24k.toFixed(2)
     else 
-      text = "No prices available."
+      text = "Gold Prices not available!"
     
     marquee.textContent = text
     document.getElementById('marquee').appendChild(marquee)
