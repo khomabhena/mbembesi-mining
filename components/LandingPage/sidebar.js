@@ -2,6 +2,7 @@ import { useStateContext } from '@/context/StateContext'
 import { getButtonName, getNavMenu } from '@/data/nav-menu'
 import React from 'react'
 import { AiOutlinePlus } from 'react-icons/ai'
+import NavbarSocials from './navbar-socials'
 
 const Sidebar = () => {
     const { webSidebar, setWebSidebar } = useStateContext()
@@ -25,6 +26,7 @@ const Sidebar = () => {
                         ))
                     }
                 </ol>
+                <NavbarSocials />
                 {/* <button className=' bg-sky-700 text-slate-100 w-fit self-center px-8 py-2 rounded-md'>{getButtonName()}</button> */}
             </div>
     </div>

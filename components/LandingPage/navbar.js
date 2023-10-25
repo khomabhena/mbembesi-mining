@@ -19,20 +19,19 @@ const Navbar = () => {
     }
 
   return (
-    <div className='fixed z-10 h-24 bg-slate-100 left-0 top-0 right-0'>
+    <div className='fixed z-10 h-20 bg-slate-100 left-0 top-8 right-0'>
         <Script type='text/javascript' src='/static/api.js'></Script>
-        <div className=' h-8 grid grid-cols-3 text-slate-300 justify-evenly text-sm items-center bg-slate-700'>
-            <div id='marquee' className=' col-span-2 px-8 flex-1'></div>
+        {/* <div className=' h-8 grid grid-cols-3 text-slate-300 justify-evenly text-sm items-center bg-slate-700'>
+            <div id='marquee' className=' col-span-2 px-8 text-sm flex-1'></div>
             <NavbarSocials />
-        </div>
+        </div> */}
         {/* Main Navbar */}
-        <div className='flex z-50 shadow-md justify-between items-center pl-2 pr-16 md:px-20 fixed top-0 left-0 right-0 h-24'>
-            {/* <Link href='/'>
-                <Image className=' h-full w-auto py-6 md:py-4' src='/logo-color.png' alt='' width={200} height={150} />
-            </Link> */}
+        <div className='flex z-50 shadow-md justify-between items-center pl-2 pr-16 md:px-20 h-full'>
+            <Link className=' h-full' href='/'>
+            <Image className=' h-full w-auto py-0' src='/logo.png' width={685} height={346} alt='logo' />
+            </Link>
             {/* <h1 className=' font-extrabold text-xl text-emerald-600'>
             </h1> */}
-            <Image className=' h-full w-auto mt-8' src='/logo.png' width={685} height={346} alt='logo' />
             <ol className=' hidden md:flex gap-4 text-slate-500 items-center text-md'>
                 {
                     getNavMenu().map(({name, link}, index) => (

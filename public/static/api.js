@@ -15,7 +15,7 @@ fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
 .then(result => {
     const res = JSON.parse(result)
     if (!res.error)
-      text += " ******************* GOLD: $" + res.price.toFixed(2) + "" + res.currency + "----Low Price: $" + res.low_price.toFixed(2) + "----Gram 24k: $" + res.price_gram_24k.toFixed(2)
+      text += " *** GOLD: $" + res.price.toFixed(2) + "" + res.currency + "-Low Price: $" + res.low_price.toFixed(2) + "-Gram 24k: $" + res.price_gram_24k.toFixed(2)
     else 
       text = "Gold Prices not available!"
     
@@ -32,7 +32,7 @@ fetch("https://www.goldapi.io/api/XAG/USD", requestOptions)
 .then(result => {
     const res = JSON.parse(result)
     if (!res.error)
-      text += " ******************* SILVER: $" + res.price.toFixed(2) + "" + res.currency + "----Low Price: $" + res.low_price.toFixed(2) + "----Gram 24k: $" + res.price_gram_24k.toFixed(2)
+      text += " *** SILVER: $" + res.price.toFixed(2) + "" + res.currency + "-Low Price: $" + res.low_price.toFixed(2) + "-Gram 24k: $" + res.price_gram_24k.toFixed(2)
     else 
       text = "Gold Prices not available!"
     
@@ -49,7 +49,7 @@ fetch("https://www.goldapi.io/api/XPT/USD", requestOptions)
 .then(result => {
     const res = JSON.parse(result)
     if (!res.error)
-      text += " ******************* PLATINUM: $" + res.price.toFixed(2) + "" + res.currency + "----Low Price: $" + res.low_price.toFixed(2) + "----Gram 24k: $" + res.price_gram_24k.toFixed(2)
+      text += " *** PLATINUM: $" + res.price.toFixed(2) + "" + res.currency + "-Low Price: $" + res.low_price.toFixed(2) + "-Gram 24k: $" + res.price_gram_24k.toFixed(2)
     else 
       text = "Gold Prices not available!"
     

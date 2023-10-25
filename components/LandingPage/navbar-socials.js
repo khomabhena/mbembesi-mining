@@ -10,7 +10,7 @@ const NavbarSocials = () => {
       icon: <RiTwitterXLine />
     },
     {
-      link: '/facebook.com/mbembesi-mine',
+      link: 'https://facebook.com/mbembesi-mine',
       icon: <FaFacebookF />
     },
     {
@@ -28,7 +28,7 @@ const NavbarSocials = () => {
   ]
   return (
     <div className='flex flex-col flex-1 h-full w-full'>
-      <ol className=' flex h-full justify-center text-lg gap-8 items-center'>
+      <ol className=' flex h-full justify-center text-base gap-8 items-center'>
         {
           getIcons.map((item, index) => (
             <li key={index} className=' cursor-pointer'>
